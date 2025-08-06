@@ -179,7 +179,9 @@
 <pre><code class="language-Plain">seccomp-tools dump ./文件
 </code></pre>
 <p>看第四行是不是return kill 了是不是禁用了execve</p>
-<p><img src="https://hnusec-star.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDhkMmJhMWRiY2YxZDEwYmFiNDE3NDUxZjk2YmEwNjNfenRXaTdZdlhYOWZqUmtaZkZnbEJzeGhKVTU0TGkzMzJfVG9rZW46V2ZkTGIwcWNrb282dWl4WjhBeWMwZ1pabkZnXzE3NTQ0NTQyNTQ6MTc1NDQ1Nzg1NF9WNA" alt="img"></p>
+<img width="865" height="280" alt="image" src="https://github.com/user-attachments/assets/e7753892-c679-4b63-be3a-cf5181cc0ea3" />
+
+
 <p>有的里面好像也直接有sandbox</p>
 <p>里面或者也可以通过prctl函数调用，第二种是使用seccomp库</p>
 <p>shellcode写到mmap分配的空间里。能写rop的话可以写。但是感觉如果写的话一般要栈迁移一下。</p>
