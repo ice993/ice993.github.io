@@ -224,36 +224,6 @@
 </div>
 
 <div class="post">
-    <a href="/2025/11/03/%E5%AF%84%E5%AD%98%E5%99%A8%E6%98%AF%E4%B8%BA%E4%BA%86%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%8A%A0%E7%9A%84%E5%BF%AB%E8%AE%BE%E8%AE%A1%E7%9A%84/">
-        <h2 class="post-title"></h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2025/11/3
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2025/11/03/%E5%AF%84%E5%AD%98%E5%99%A8%E6%98%AF%E4%B8%BA%E4%BA%86%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%8A%A0%E7%9A%84%E5%BF%AB%E8%AE%BE%E8%AE%A1%E7%9A%84/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
     <a href="/2025/11/03/sandbox/">
         <h2 class="post-title"></h2>
     </a>
@@ -271,8 +241,7 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>#sandbox</p>
-<p>沙箱可以这个来看开没开</p>
+            <h2 id="sandbox"><a href="#sandbox" class="headerlink" title="sandbox"></a>sandbox</h2><p>沙箱可以这个来看开没开</p>
 <pre><code class="language-Plain">seccomp-tools dump ./文件
 </code></pre>
 <p>看第四行是不是return kill 了是不是禁用了execve</p>
@@ -329,16 +298,9 @@
 <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>1.就是先初始化，</p>
 <p>2.写一段 o+r+ 比较 的shellcode,</p>
 <p>3.然后再在底下添加判断正确或错误的函数。</p>
-<p>这个是模板，单字节比对示例：</p>
-<pre><code class="language-C">mov al, [flag_addr + offset]      ; 读取实际 Flag 字节
-mov bl, guessed_char              ; 将猜测字节载入
-cmp al, bl                        ; 比对
-jne wrong                         ; 如果不相等则跳转到 wrong
-; 相等：进入死循环或耗时路径
-jmp in_loop
-</code></pre>
-<h2 id="一道题"><a href="#一道题" class="headerlink" title="一道题"></a>一道题</h2><p>下面看一下这个litctf里的侧信道</p>
-<p>暂时无法在飞书文档外展示此内容</p>
+<p>…<br>这个是模板，单字节比对示例：</p>
+<p><code> </code> <code>C mov al, [flag_addr + offset]      ; 读取实际 Flag 字节 mov bl, guessed_char              ; 将猜测字节载入 cmp al, bl                        ; 比对 jne wrong                         ; 如果不相等则跳转到 wrong ; 相等：进入死循环或耗时路径 jmp in_loop </code> <code> </code></p>
+<h2 id="一道题"><a href="#一道题" class="headerlink" title="一道题"></a>一道题</h2><p>下面看一下这个litctf里的侧信道<br>…<br>暂时无法在飞书文档外展示此内容</p>
 <p>看一下沙箱</p>
 <p><img src="https://hnusec-star.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY5ZmQ4M2UxMDAyOTAzZDQxZmVlNTAyMTQ0NGNjMGFfaDk0UVl0Wm1jbzRQRzVTZGNHbUY0YndmdE5aUU51dmFfVG9rZW46TG0zQWJwWm45b1pKRmV4Yk9LTmNvaXZwbkFlXzE3NTQ0NTQyNTQ6MTc1NDQ1Nzg1NF9WNA" alt="img"></p>
 <p>这个标志比较明显。就没有write了。没有write的情况下我们想要绕过沙箱。就要考虑这个侧信道的方法</p>
@@ -478,6 +440,36 @@ if __name__ == &quot;__main__&quot;:
         
     </div>
     <a href="/2025/11/03/sandbox/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/11/03/%E5%AF%84%E5%AD%98%E5%99%A8%E6%98%AF%E4%B8%BA%E4%BA%86%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%8A%A0%E7%9A%84%E5%BF%AB%E8%AE%BE%E8%AE%A1%E7%9A%84/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/11/3
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2025/11/03/%E5%AF%84%E5%AD%98%E5%99%A8%E6%98%AF%E4%B8%BA%E4%BA%86%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%8A%A0%E7%9A%84%E5%BF%AB%E8%AE%BE%E8%AE%A1%E7%9A%84/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
