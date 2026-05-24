@@ -203,7 +203,7 @@
 </tr>
 <tr>
 <td>Email</td>
-<td><a href="mailto:&#50;&#x39;&#52;&#x30;&#53;&#x38;&#x32;&#51;&#x31;&#54;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">2940582316@qq.com</a></td>
+<td><a href="mailto:&#x32;&#57;&#x34;&#48;&#x35;&#x38;&#x32;&#x33;&#49;&#x36;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#109;">2940582316@qq.com</a></td>
 </tr>
 </tbody></table>
 <p><img src="/images/lty.png" alt="avatar"></p>
@@ -345,6 +345,44 @@
     }
     window.addEventListener("load", function() {
         new cursoreffects.fairyDustCursor({ colors: ["#66afef", "#92cafa", "#ffa2c4", "#a29bfe", "#fd79a8"] });
+        new cursoreffects.springyEmojiCursor({ emoji: ["✨", "🌸", "💫", "⭐", "🌟"] });
+    });
+    document.addEventListener("click", function(e) {
+        var x = e.clientX, y = e.clientY;
+        var colors = ["#66afef","#92cafa","#ffa2c4","#a29bfe","#fd79a8","#ffeaa7","#55efc4"];
+        for (var i = 0; i < 12; i++) {
+            (function() {
+                var el = document.createElement("div");
+                var size = Math.random() * 8 + 4;
+                var color = colors[Math.floor(Math.random() * colors.length)];
+                var angle = Math.random() * Math.PI * 2;
+                var speed = Math.random() * 120 + 60;
+                var vx = Math.cos(angle) * speed;
+                var vy = Math.sin(angle) * speed;
+                var dur = Math.random() * 600 + 400;
+                var start = null;
+                el.style.cssText = [
+                    "position:fixed","width:"+size+"px","height:"+size+"px",
+                    "border-radius:50%","background:"+color,
+                    "pointer-events:none","z-index:99999",
+                    "left:"+x+"px","top:"+y+"px",
+                    "transform:translate(-50%,-50%)",
+                    "box-shadow:0 0 "+size+"px "+color
+                ].join(";");
+                document.body.appendChild(el);
+                function animate(ts) {
+                    if (!start) start = ts;
+                    var p = (ts - start) / dur;
+                    if (p >= 1) { el.remove(); return; }
+                    var ease = 1 - Math.pow(1 - p, 2);
+                    el.style.left = (x + vx * ease) + "px";
+                    el.style.top = (y + vy * ease + 200 * p * p) + "px";
+                    el.style.opacity = 1 - p;
+                    requestAnimationFrame(animate);
+                }
+                requestAnimationFrame(animate);
+            })();
+        }
     });
     </script>
 </body>
