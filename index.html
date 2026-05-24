@@ -45,10 +45,9 @@
 <script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
-<script src="/js/lib/click-effect.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -321,7 +320,7 @@ Quick...
         
         <span class="tag">
             
-            <a href="/tags/CTF/" style="color: #00a596">CTF</a>
+            <a href="/tags/CTF/" style="color: #00bcd4">CTF</a>
         </span>
         
         <span class="tag">
@@ -336,7 +335,7 @@ Quick...
         
         <span class="tag">
             
-            <a href="/tags/bridge/" style="color: #ff7d73">bridge</a>
+            <a href="/tags/bridge/" style="color: #00bcd4">bridge</a>
         </span>
         
     </div>
@@ -399,17 +398,17 @@ unsigned char byte_5020[256] = &#123...
         
         <span class="tag">
             
-            <a href="/tags/pwn/" style="color: #ff7d73">pwn</a>
+            <a href="/tags/pwn/" style="color: #00bcd4">pwn</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/heap/" style="color: #03a9f4">heap</a>
+            <a href="/tags/heap/" style="color: #ffa2c4">heap</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/IoT/" style="color: #00bcd4">IoT</a>
+            <a href="/tags/IoT/" style="color: #ff7d73">IoT</a>
         </span>
         
     </div>
@@ -464,7 +463,7 @@ p1 = b&#...
         
         <span class="tag">
             
-            <a href="/tags/CTF/" style="color: #ff7d73">CTF</a>
+            <a href="/tags/CTF/" style="color: #03a9f4">CTF</a>
         </span>
         
         <span class="tag">
@@ -474,7 +473,7 @@ p1 = b&#...
         
         <span class="tag">
             
-            <a href="/tags/fmt/" style="color: #ffa2c4">fmt</a>
+            <a href="/tags/fmt/" style="color: #00a596">fmt</a>
         </span>
         
         <span class="tag">
@@ -538,7 +537,7 @@ main...
         
         <span class="tag">
             
-            <a href="/tags/heap/" style="color: #00bcd4">heap</a>
+            <a href="/tags/heap/" style="color: #03a9f4">heap</a>
         </span>
         
         <span class="tag">
@@ -611,12 +610,12 @@ seccomp函数调用
         
         <span class="tag">
             
-            <a href="/tags/sandbox/" style="color: #ff7d73">sandbox</a>
+            <a href="/tags/sandbox/" style="color: #00bcd4">sandbox</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/seccomp/" style="color: #03a9f4">seccomp</a>
+            <a href="/tags/seccomp/" style="color: #00a596">seccomp</a>
         </span>
         
     </div>
@@ -673,12 +672,12 @@ mmap的底层操作
         
         <span class="tag">
             
-            <a href="/tags/pwn/" style="color: #00bcd4">pwn</a>
+            <a href="/tags/pwn/" style="color: #00a596">pwn</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/mmap/" style="color: #03a9f4">mmap</a>
+            <a href="/tags/mmap/" style="color: #00bcd4">mmap</a>
         </span>
         
     </div>
@@ -732,17 +731,17 @@ pack_str(s)：MQTT 的字符串打包器在 C 语言中，字...
         
         <span class="tag">
             
-            <a href="/tags/pwn/" style="color: #00a596">pwn</a>
+            <a href="/tags/pwn/" style="color: #00bcd4">pwn</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/IoT/" style="color: #03a9f4">IoT</a>
+            <a href="/tags/IoT/" style="color: #ffa2c4">IoT</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/MQTT/" style="color: #00a596">MQTT</a>
+            <a href="/tags/MQTT/" style="color: #ff7d73">MQTT</a>
         </span>
         
     </div>
@@ -866,21 +865,78 @@ pack_str(s)：MQTT 的字符串打包器在 C 语言中，字...
     </div>
     <script src="/js/main.js"></script>
     
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="7481365421"
-        fixed="true"
-        autoplay="false"
-        loop="all"
-        order="random"
-        volume="0.7"
-        theme="#66afef">
-    </meting-js>
+    <div id="aplayer-container"></div>
+    <script>
+    window.addEventListener("load", function() {
+        new APlayer({
+            container: document.getElementById("aplayer-container"),
+            fixed: true,
+            mini: true,
+            autoplay: false,
+            loop: "all",
+            order: "random",
+            volume: 0.7,
+            theme: "#66afef",
+            audio: [
+                {
+                    name: "Rain",
+                    artist: "Free Lofi",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/(FREE)%20Lo-fi%20Type%20Beat%20-%20Rain.mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "Hanging Lanterns",
+                    artist: "Kalaido",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/Kalaido%20-%20Hanging%20Lanterns.mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "First Snow",
+                    artist: "Kerusu",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/Kerusu%20-%20First%20Snow.mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "Waves",
+                    artist: "Matt Quentin",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/Matt%20Quentin%20-%20Waves.mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "Onion",
+                    artist: "Lukrembo",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/Onion%20(Prod.%20by%20Lukrembo).mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "Tranquillity",
+                    artist: "Chill Lofi",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/Tranquillity%20-%20Chill%20Lofi%20Hip%20Hop%20Beat%20(FREE%20FOR%20PROFIT%20USE).mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "car radio",
+                    artist: "flovry",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/flovry%20-%20car%20radio.mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                },
+                {
+                    name: "deep space",
+                    artist: "Ambient Lofi",
+                    url: "https://archive.org/download/kalaido-hanging-lanterns_202101/deep%20space%20-%20Ambient%20Lofi%20Hip%20Hop%20Beat%20(FREE%20FOR%20PROFIT%20USE).mp3",
+                    cover: "https://archive.org/services/img/kalaido-hanging-lanterns_202101"
+                }
+            ]
+        });
+    });
+    </script>
     <script>
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("/sw.js");
     }
+    window.addEventListener("load", function() {
+        new cursoreffects.fairyDustCursor({ colors: ["#66afef", "#92cafa", "#ffa2c4", "#a29bfe", "#fd79a8"] });
+    });
     </script>
 </body>
 </html>
