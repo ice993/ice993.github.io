@@ -3,10 +3,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Categories | 风铃</title>
-    <meta name="author" content="北冰洋最纯的冰" />
-    <meta name="description" content="什么都有一点" />
-    <meta name="keywords" content="这是什么" />
+    <title>categories | 良夜の小窝</title>
+    <meta name="author" content="良夜" />
+    <meta name="description" content="Here's an cat..." />
+    <meta name="keywords" content="良夜,博客,ice993" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -42,7 +42,12 @@
 
 
 
+
+
+
+
 <link rel="stylesheet" href="/css/main.css" />
+<script src="/js/lib/click-effect.js"></script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -59,7 +64,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>风铃</span>
+            <span>良夜の小窝</span>
         </a>
         
         <a href="/">
@@ -91,7 +96,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;风铃</span>
+            <span>&emsp;良夜の小窝</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -150,12 +155,30 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>categories</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/5/24
+        </span>
         
         
     </div>
+    
+    <div class="content" v-pre>
+        
+    </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -163,11 +186,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2025 风铃
+            2022 - 2026 良夜の小窝
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;北冰洋最纯的冰
+            &commat;良夜
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
@@ -188,21 +211,16 @@
     </div>
     <script src="/js/main.js"></script>
     
+    
+
+
+
+
+    
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+    }
+    </script>
 </body>
-<script src="https://giscus.app/client.js"
-        data-repo="ice993/hexo-123"
-        data-repo-id="R_kgDOPWL0Lg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOPWL0Ls4Ct1k-"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
 </html>
