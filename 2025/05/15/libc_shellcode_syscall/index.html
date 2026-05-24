@@ -48,6 +48,9 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 <script src="/js/lib/click-effect.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
@@ -185,7 +188,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/pwn/" style="color: #03a9f4">
+                <a href="/tags/pwn/" style="color: #00a596">
                     pwn
                 </a>
             </span>
@@ -199,14 +202,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/shellcode/" style="color: #03a9f4">
+                <a href="/tags/shellcode/" style="color: #00a596">
                     shellcode
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/syscall/" style="color: #00a596">
+                <a href="/tags/syscall/" style="color: #00bcd4">
                     syscall
                 </a>
             </span>
@@ -718,6 +721,17 @@ payload += p32(8)                 # 写入长度（/bin/sh\x00）
 
 
     
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3778678"
+        fixed="true"
+        autoplay="false"
+        loop="all"
+        order="random"
+        volume="0.7"
+        theme="#66afef">
+    </meting-js>
     <script>
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("/sw.js");
